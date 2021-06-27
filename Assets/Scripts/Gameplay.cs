@@ -12,9 +12,9 @@ namespace TicTacToe.Scripts
         public static bool IsGameFinished { get; set; }
         [SerializeField] private GameObject letterX;
         [SerializeField] private GameObject letterO;
-        [SerializeField] private GameObject originalBoard;
+        // [SerializeField] private GameObject originalBoard;
         private GameObject _board;
-        private const int BoardSize = 3; 
+        private const int BoardSize = 4; 
         private int[,] _mat;
         private int _round = 0;
         private bool _playerTurn; //True 1st player, False 2nd player turn
@@ -58,14 +58,14 @@ namespace TicTacToe.Scripts
                 }
                 Debug.Assert(null != letterO, "null == letterO");
 
-                if (null == originalBoard)
-                {
-                    originalBoard = GameObject.FindGameObjectWithTag("Board");
-                }
-                Debug.Assert(null != letterO, "null == letterO");
+                // if (null == originalBoard)
+                // {
+                //     originalBoard = GameObject.FindGameObjectWithTag("Board");
+                // }
+                // Debug.Assert(null != letterO, "null == letterO");
                 
-                Destroy(_board);
-                _board = Instantiate(originalBoard, new Vector3(0, 1, 0), Quaternion.identity);
+                // Destroy(_board);
+                // _board = Instantiate(originalBoard, new Vector3(0, 1, 0), Quaternion.identity);
             }
 
             _firstRun = false;
@@ -91,13 +91,13 @@ namespace TicTacToe.Scripts
             }
             Debug.Assert(null != letterO, "null == letterO");
 
-            if (null == originalBoard)
-            {
-                originalBoard = GameObject.FindGameObjectWithTag("Board");
-            }
-            Debug.Assert(null != letterO, "null == letterO");
-            
-            _board = Instantiate(originalBoard, new Vector3(0, 1, 0), Quaternion.identity);
+            // if (null == originalBoard)
+            // {
+            //     originalBoard = GameObject.FindGameObjectWithTag("Board");
+            // }
+            // Debug.Assert(null != letterO, "null == letterO");
+            //
+            // _board = Instantiate(originalBoard, new Vector3(0, 1, 0), Quaternion.identity);
         }
 
         private void OnEnable()

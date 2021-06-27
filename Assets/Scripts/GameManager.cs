@@ -11,6 +11,11 @@ namespace TicTacToe
         public delegate void OnRestart();
         public static event OnRestart Restart;
 
+        private void Start()
+        {
+            
+        }
+
         void Update()
         {
             if (Gameplay.IsGameFinished && Input.GetMouseButtonUp(0))
